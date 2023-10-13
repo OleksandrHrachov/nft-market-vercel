@@ -1,0 +1,41 @@
+.subscribe {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 60px;
+    background-color: var(--gray3B);
+    border-radius: 20px;
+
+    &-image-wrapper {
+      width: 425px;
+      min-width: 380px;
+      height: auto;
+    }
+
+    &-image {
+      width: 100%;
+    }
+
+    &-content {
+      width: 425px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      &-title {
+        font-size: 38px;
+        line-height: 46px;
+        margin-bottom: 10px;
+        text-transform: capitalize;
+      }
+
+      &-description {
+        font-size: 22px;
+        line-height: 36px;
+        margin-bottom: 40px;
+        text-transform: capitalize;
+      }
+    }
+  }
+}

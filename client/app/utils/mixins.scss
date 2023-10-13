@@ -1,0 +1,140 @@
+@mixin onMobile {
+  @media (max-width: 834px) {
+    @content;
+  }
+}
+
+@mixin onTablet {
+  @media (min-width: 835px) and (max-width: 1080px) {
+    @content;
+  }
+}
+
+@mixin onDesktop {
+  @media (min-width: 1081px) and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin onDesktopLarge {
+  @media (min-width: 1201px) {
+    @content;
+  }
+}
+
+@mixin section-title {
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 38px;
+  line-height: 46px;
+}
+
+@mixin link-underline {
+  &:after {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    content: "";
+    height: 0;
+    width: 0;
+    background-color: transparent;
+    transition: all 0.3s;
+  }
+
+  &:before {
+    position: absolute;
+    bottom: 10px;
+    right: 50%;
+    content: "";
+    height: 0;
+    width: 0;
+    background-color: transparent;
+    transition: all 0.3s;
+  }
+
+  &:hover {
+    &:after {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      content: "";
+      height: 2px;
+      width: 40%;
+      background-color: var(--white);
+    }
+
+    &:before {
+      position: absolute;
+      bottom: 10px;
+      right: 50%;
+      content: "";
+      height: 2px;
+      width: 40%;
+      background-color: var(--white);
+    }
+  }
+}
+
+@mixin button-underline {
+  &:after {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    content: "";
+    height: 2px;
+    width: 0;
+    background-color: transparent;
+    transition: all 0.3s;
+  }
+
+  &:before {
+    position: absolute;
+    bottom: 10px;
+    right: 50%;
+    content: "";
+    height: 2px;
+    width: 0;
+    background-color: transparent;
+    transition: all 0.3s;
+  }
+
+  &:hover {
+    &:after {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      content: "";
+      height: 2px;
+      width: 40%;
+      background-color: var(--white);
+    }
+
+    &:before {
+      position: absolute;
+      bottom: 10px;
+      right: 50%;
+      content: "";
+      height: 2px;
+      width: 40%;
+      background-color: var(--white);
+    }
+  }
+}
+
+@mixin scroll-bar {
+  &::-webkit-scrollbar {
+    position: absolute;
+    width: 12px;
+  }
+
+  &::-webkit-scrollbar-track {
+    position: absolute;
+    background: var(--primary-background);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--gray85);
+    border-radius: 20px;
+    border: 3px solid var(--primary-background);
+  }
+}

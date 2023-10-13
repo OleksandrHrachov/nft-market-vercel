@@ -1,0 +1,28 @@
+@import '../../utils/mixins.scss';
+
+.button {
+  position: relative;
+  cursor: pointer;
+  color: var(--white);
+  font-weight: 600;
+  border-radius: 20px;
+  padding: 0 30px;
+  height: 60px;
+  font-family: inherit;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include button-underline;
+
+  &__icon {
+    margin-right: 12px;
+  }
+
+  &--primary {
+    background-color: var(--purple);
+    border: 2px solid var(--purple);
+    
+  }
+}

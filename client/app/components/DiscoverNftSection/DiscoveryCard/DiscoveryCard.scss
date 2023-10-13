@@ -1,0 +1,72 @@
+.descovery-card {
+  display: flex;
+  flex-direction: column;
+  width: 330px;
+  min-width: 260px;
+  border-radius: 20px;
+  overflow: hidden;
+  height: fit-content;
+
+
+  &__image {
+    width: 100%;
+    flex-grow: 1;
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 173px;
+    padding: 20px 30px;
+    background-color: var(--gray3B);
+
+    &-title {
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 30px;
+      text-transform: capitalize;
+    }
+
+    &-creator {
+      display: flex;
+      align-items: center;
+
+      &-avatar {
+        margin-right: 12px;
+      }
+      &-name {
+        line-height: 22px;
+      }
+    }
+
+    &-price {
+      display: flex;
+      justify-content: space-between;
+
+      &-item {
+        display: flex;
+        flex-direction: column;
+
+        &-title {
+          font-size: 12px;
+          line-height: 13px;
+          color: var(--gray85);
+          margin-bottom: 8px;
+        }
+
+        .right {
+          align-self: flex-end;
+        }
+
+        &-price {
+          line-height: 22px;
+          letter-spacing: 1px;
+        }
+      }
+    }
+  }
+}

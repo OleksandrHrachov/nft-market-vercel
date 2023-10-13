@@ -1,0 +1,26 @@
+@import '../../utils/mixins.scss';
+
+.categories {
+  &__title {
+    @include section-title;
+    margin-bottom: 60px;
+  }
+
+  &__list {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, 240px);
+    justify-content: center;
+    justify-items: center;
+    column-gap: 30px;
+    row-gap: 30px;
+
+    &-empty-list {
+      text-align: center;
+      font-weight: 600;
+      font-size: 22px;
+      text-transform: capitalize;
+      line-height: 30px;
+    }
+  }
+}
